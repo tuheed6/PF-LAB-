@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int hour;
+    printf("Enter the hour in 24-hour format");
+    scanf("%d", &hour);
+
+    if (hour >= 5 && hour <= 11) {
+        printf("Good Morning");
+    } else if (hour >= 12 && hour <= 18) {
+        printf("Good Afternoon");
+    } else if (hour >= 19 && hour <= 23) {
+        printf("Good Night");
+    } else {
+        printf("Invalid hour value");
+    }
+
+    return 0;
+}

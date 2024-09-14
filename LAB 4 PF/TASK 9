@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    float fsc_marks, nts_marks;
+    printf("Enter your F.Sc marks (out of 100): ");
+    scanf("%f", &fsc_marks);
+    printf("Enter your NTS marks (out of 100): ");
+    scanf("%f", &nts_marks);
+
+    if (fsc_marks > 70 && nts_marks > 70) {
+        printf("You are eligible for IT department at Oxford University\n");
+    } else if (fsc_marks > 70 && nts_marks > 60) {
+        printf("You are eligible for Electronics department at Oxford University\n");
+    } else if (fsc_marks > 70 && nts_marks > 50) {
+        printf("You are eligible for Telecommunication department at Oxford University\n");
+    } else if (fsc_marks >= 60 && fsc_marks <= 70 && nts_marks > 50) {
+        printf("You are eligible for IT department at MIT\n");
+    } else if (fsc_marks >= 50 && fsc_marks < 60 && nts_marks > 50) {
+        printf("You are eligible for Chemical department at MIT\n");
+    } else if (fsc_marks >= 40 && fsc_marks < 50 && nts_marks > 50) {
+        printf("You are eligible for Computer department at MIT\n");
+    } else {
+        printf("You are not eligible for any department at Oxford University or MIT\n");
+    }
+
+    return 0;
+}

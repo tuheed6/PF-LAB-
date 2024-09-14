@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    int customer_id;
+    char customer_name;
+    int units_consumed;
+    float amount, surcharge, net_amount;
+
+    printf("Enter customer ID ");
+    scanf("%d", &customer_id);
+
+    printf("Enter customer name: ");
+    scanf("%c", customer_name);
+
+    printf("Enter units consumed: ");
+    scanf("%d", &units_consumed);
+
+    if (units_consumed <= 199) {
+        amount = units_consumed * 16.20;
+    } else if (units_consumed >= 200 && units_consumed < 300) {
+        amount = units_consumed * 20.10;
+    } else if (units_consumed >= 300 && units_consumed < 500) {
+        amount = units_consumed * 27.10;
+    } else {
+        amount = units_consumed * 35.90;
+    }
+
+    if (amount > 18000) {
+        surcharge = amount * 0.15;
+    } else {
+        surcharge = 0;
+    }
+
+    net_amount = amount + surcharge;
+
+    printf("Customer ID %d\n", customer_id);
+    printf("Customer Name %s\n", customer_name);
+    printf("Units Consumed %d\n", units_consumed);
+    printf("Amount Charges Rs %f per unit:\n", 35.90);
+    printf("%f\n", amount);
+    printf("Surcharge Amount %f\n", surcharge);
+    printf("Net Amount Paid by the Customer %f\n", net_amount);
+
+    return 0;
+}

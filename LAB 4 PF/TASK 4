@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    double cost, discount, savedAmount, amountAfterDiscount;
+
+    printf("Enter the cost of shopping: ");
+    scanf("%f", &cost);
+
+    if (cost < 500) {
+        printf("No discount possible");
+    } else {
+        if (cost < 2000) discount = 0.05;
+        else if (cost < 4000) discount = 0.10;
+        else if (cost < 6000) discount = 0.20;
+        else discount = 0.35;
+
+        savedAmount = cost * discount;
+        amountAfterDiscount = cost - savedAmount;
+
+        printf("Actual amount: %.2f\n", cost);
+        printf("Discount: %.2f%%\n", discount * 100);
+        printf("Saved amount: %.2f\n", savedAmount);
+        printf("Amount after discount: %.2f\n", amountAfterDiscount);
+    }
+
+    return 0;
+}

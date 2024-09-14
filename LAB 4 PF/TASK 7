@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int light_intensity;
+    printf("Enter the light intensity value (0-1000): ");
+    scanf("%d", &light_intensity);
+
+    if (light_intensity > 500) {
+        printf("Exposed under sunshine\n");
+    } else if (light_intensity >= 100 && light_intensity <= 500) {
+        printf("Lighting\n");
+    } else if (light_intensity >= 0 && light_intensity <= 100) {
+        printf("Evening\n");
+    } else {
+        printf("Invalid light intensity value\n");
+    }
+
+    return 0;
+}
